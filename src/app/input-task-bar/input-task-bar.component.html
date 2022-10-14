@@ -1,0 +1,11 @@
+<input #newTask (keyup.enter)="addTask($event); newTask.value='' " (blur)="addTask($event); newTask.value='' "
+    placeholder="Task...">
+
+<button type="button" (click)="addTask($event)">Add</button>
+
+<ul>
+    <li *ngFor="let item of toDoItems$ | async"> {{item.title}} </li>
+</ul>
+
+
+
